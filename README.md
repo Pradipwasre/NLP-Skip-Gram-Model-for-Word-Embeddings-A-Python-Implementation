@@ -1,26 +1,23 @@
-# NLP-Skip-Gram-Model-for-Word-Embeddings-A-Python-Implementation
-Skip-Gram Model word2vec Example - Discover how to apply the skip-gram algorithm in NLP to create word embeddings from a document dataset.
+# Word2Vec: Learning word embeddings using Skip-gram Method
+This repository contains the code for text processing and Naive Bayes Model for multi-class text classification.
 
-Project Root/
-- Input/
-  - config.py          : Configuration file for setting parameters
-  - Engine.py          : Main engine logic for training the model
-  - complaints.csv     : Input dataset for word embeddings
+### Installation
+To install the dependencies run:
+```buildoutcfg
+pip install -r requirements.txt
+```
 
-- Output/
-  - emb.pkl            : Saved word embeddings
-  - idx2word.pkl       : Mapping of indices to words
-  - tokens.pkl         : Tokenized words from the input data
-  - weights.pkl        : Model weights
-  - word2idx.pkl       : Mapping of words to indices
+### Dataset
+The [dataset](https://catalog.data.gov/dataset/consumer-complaint-database) is a collection of complaints about consumer financial products and services that we sent to companies for response. The actual text of the complaint by the consumer is given in the `Consumer complaint narrative` column. We are going to use this column to learn the word vectors. 
 
-- Source/
-  - __pycache__/       : Python bytecode cache
-  - data.py            : Script for data preprocessing and handling
-  - model.py           : Script defining the skip-gram model
-  - utils.py           : Utility functions for model support
+### Preprocess the data
+To do data pre-processing run:
+```buildoutcfg
+python processing.py
+```
 
-- processing.py        : Data processing script
-- README.md            : Documentation for the project
-- requirements.txt     : Required Python libraries for the project
-- skip_gram.ipynb      : Jupyter notebook for running and experimenting with the skip-gram model
+### Train the word2vec model
+To train the word2vec model run
+```buildoutcfg
+python Engine.py
+```
